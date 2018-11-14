@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.9.3/umd/popper.min.js" integrity="sha384-knhBOwpf8/28D6ygAjJeb0STNDZqfPbKaWQ8wIz/xgSc0xXwKsKhNype8fmfMka2" crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <!-- my css -->
+    <link href="my.css" rel="stylesheet">
+
+    <!-- Scatter JS. -->
+    <script src="../js/scatter.min.js"></script>
+    <script src="../js/eosforce.js"></script>
+    <script src="../js/test.js"></script>
+
+  </head>
+  <body>
+  <div class="container bs-docs-container">
+    <h3>INGREOS</h3>
+    <div class="btn-group btn-group-justified">
+      <button type="button" class="btn btn-info btn-lg" onclick="connect()">测试连接</button>
+      <button type="button" class="btn btn-primary btn-lg" onclick="login()">登录</button>
+    </div>
+      <br><br><br>
+      <form name="input" method="post">
+        EOSForce Account:<br>
+        <p class="has-dynamic-label">
+          <input type="text" name="toAccount" id="dynamic-label-input"  placeholder="To whom" required>
+        </p>
+        Transfer Amount:<br>
+        <p>
+          <input type="number" step="0.0001" name="amount" id="in-range-input" min="0" required>
+          <span class="help-text"> (accuracy of 4 decimal points)</span>
+        </p>
+        Memo:<br>
+        <p class="has-dynamic-label">
+          <input type="text" name="memo" id="dynamic-label-input"  placeholder="Wanna say something..." required>
+        </p>
+        <br><br><br>
+        <div class="col-md-12"><input type="button" value="转账" class="btn btn-primary btn-lg btn-block" onclick="transfer();"></div>
+      </form>
+      
+  </div>
+  </body>
+</html>
